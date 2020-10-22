@@ -14,7 +14,7 @@ def index():
 def ValuePredictor(to_predict_list):
     to_predict = np.array(to_predict_list).reshape(1,3)
     path = os.path.abspath("model.pkl")
-    loaded_model = pickle.load(open(path,'rb'))
+    loaded_model = pickle.load(open('app/model.pkl','rb'))
     result = loaded_model.predict(to_predict)
     return result[0]
 
